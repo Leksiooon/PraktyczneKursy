@@ -12,6 +12,7 @@ namespace PraktyczneKursy.Controllers
         public ActionResult Index()
         {
             // komentarz
+            // praca nad nową funkcjonalnością
             return View();
         }
     }
