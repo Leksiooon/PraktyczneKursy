@@ -25,7 +25,7 @@ namespace PraktyczneKursy.DAL
             base.OnModelCreating(modelBuilder);
 
             //wyłącza konwencję, która automatycznie tworzy liczbę mnogą dla nazw tabel w bazie danych
-            modelBuilder.Conventions.Remove<PluralizingEntitySetNameConvention>();
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
     }
 }

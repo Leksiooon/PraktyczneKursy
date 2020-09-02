@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PraktyczneKursy.DAL;
+using PraktyczneKursy.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,11 +10,13 @@ namespace PraktyczneKursy.Controllers
 {
     public class HomeController : Controller
     {
-        // GET: Home
+        private KursyContext db = new KursyContext();
+
         public ActionResult Index()
         {
-            // komentarz
-            // praca nad nową funkcjonalnością
+            Kategoria kategoria = new Kategoria { NazwaKategorii = "asp.net mvc", OpisKategorii = "opis kategorii" };
+            db.Kategorie.Add(kategoria);
+            db.SaveChanges();
             return View();
         }
     }
