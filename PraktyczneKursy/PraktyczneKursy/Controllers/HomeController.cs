@@ -14,6 +14,7 @@ namespace PraktyczneKursy.Controllers
 
         public ActionResult Index()
         {
+            // test
             Kategoria kategoria = new Kategoria { NazwaKategorii = "asp.net mvc", OpisKategorii = "opis kategorii" };
             db.Kategorie.Add(kategoria);
             db.SaveChanges();
