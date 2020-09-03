@@ -4,18 +4,21 @@ using System.Linq;
 using System.Web;
 using System.Data.Entity;
 using PraktyczneKursy.Models;
+using PraktyczneKursy.Migrations;
+using System.Data.Entity.Migrations;
 
 namespace PraktyczneKursy.DAL
 {
-    public class KursyInitializer : DropCreateDatabaseAlways<KursyContext>
+    //public class KursyInitializer : DropCreateDatabaseAlways<KursyContext>
+    public class KursyInitializer : MigrateDatabaseToLatestVersion<KursyContext, Configuration>
     {
-        protected override void Seed(KursyContext context)
-        {
-            SeedKursyData(context);
-            base.Seed(context);
-        }
+        //protected override void Seed(KursyContext context)
+        //{
+        //    SeedKursyData(context);
+        //    base.Seed(context);
+        //}
 
-        private void SeedKursyData(KursyContext context)
+        public static void SeedKursyData(KursyContext context)
         {
             var kategorie = new List<Kategoria>
             {
@@ -27,7 +30,7 @@ namespace PraktyczneKursy.DAL
                 new Kategoria() { KategoriaId = 6, NazwaKategorii = "xml", NazwaPlikuIkony="xml.png", OpisKategorii = "Opis xml" },
                 new Kategoria() { KategoriaId = 7, NazwaKategorii = "c#", NazwaPlikuIkony="c#.png", OpisKategorii = "Opis c#" }
             };
-            kategorie.ForEach(k => context.Kategorie.Add(k));
+            kategorie.ForEach(k => context.Kategorie.AddOrUpdate(k));
             context.SaveChanges();
 
             var kursy = new List<Kurs>
@@ -37,7 +40,7 @@ namespace PraktyczneKursy.DAL
                 new Kurs() { AutorKursu = "irek", TytulKursu = "asp.net mvc3", KategoriaId = 1, CenaKursu = 120, Bestseller = true, NazwaPlikuObrazka = "asp3.png", DataDodania = DateTime.Now, OpisKursu="opis kursu" },
                 new Kurs() { AutorKursu = "kuba", TytulKursu = "asp.net mvc4", KategoriaId = 1, CenaKursu = 140, Bestseller = true, NazwaPlikuObrazka = "asp4.png", DataDodania = DateTime.Now, OpisKursu="opis kursu" }
             };
-            kursy.ForEach(k => context.Kursy.Add(k));
+            kursy.ForEach(k => context.Kursy.AddOrUpdate(k));
             context.SaveChanges();
         }
     }

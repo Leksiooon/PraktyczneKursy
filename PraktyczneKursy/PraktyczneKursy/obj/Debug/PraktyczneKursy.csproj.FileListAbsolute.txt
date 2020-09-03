@@ -162,3 +162,8 @@ E:\Projekty\ASP.NET\PraktyczneKursy\PraktyczneKursy\PraktyczneKursy\obj\Debug\Pr
 E:\Projekty\ASP.NET\PraktyczneKursy\PraktyczneKursy\PraktyczneKursy\obj\Debug\PraktyczneKursy.csproj.CopyComplete
 E:\Projekty\ASP.NET\PraktyczneKursy\PraktyczneKursy\PraktyczneKursy\obj\Debug\PraktyczneKursy.dll
 E:\Projekty\ASP.NET\PraktyczneKursy\PraktyczneKursy\PraktyczneKursy\obj\Debug\PraktyczneKursy.pdb
+E:\Projekty\ASP.NET\PraktyczneKursy\PraktyczneKursy\PraktyczneKursy\obj\Debug\PraktyczneKursy.Migrations.InitialCreate.resources
+E:\Projekty\ASP.NET\PraktyczneKursy\PraktyczneKursy\PraktyczneKursy\obj\Debug\PraktyczneKursy.csproj.GenerateResource.cache
+E:\Projekty\ASP.NET\PraktyczneKursy\PraktyczneKursy\PraktyczneKursy\obj\Debug\PraktyczneKursy.Migrations.dodaniePolaOpisSkrocony.resources
+E:\Projekty\ASP.NET\PraktyczneKursy\PraktyczneKursy\PraktyczneKursy\obj\Debug\PraktyczneKursy.Migrations.dodaniePolaTest.resources
+E:\Projekty\ASP.NET\PraktyczneKursy\PraktyczneKursy\PraktyczneKursy\obj\Debug\PraktyczneKursy.Migrations.usunieciePolaTest.resources
